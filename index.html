@@ -173,11 +173,15 @@
         document.addEventListener('DOMContentLoaded', ()=>{
             document.querySelector('.main').classList.remove('hidden')
             const imgHero=document.querySelector('#hero')
-            
-            if(imgHero.complete){
+            imgHero.onload=()=>{
                 imgHero.classList.add('hidden')
                 document.querySelector('.loading').classList.add('hidden')
             }
+
+         /*   if(imgHero.complete){
+                imgHero.classList.add('hidden')
+                document.querySelector('.loading').classList.add('hidden')
+            }*/
         })
        
         //handle showing the nav bar
