@@ -13,11 +13,11 @@
 </head>
 
 <body >
-    <div class="loading h-screen flex flex-col justify-center items-center fixed top-0 w-full z-40 bg-white ">
+    <!-- <div class="loading h-screen flex flex-col justify-center items-center fixed top-0 w-full z-40 bg-white ">
         <p class="text-[#162950] text-rubik pb-8">Hold on just a moment..</p>
         <p class=" text-[#162950] font-4xl"><i class="fa-solid fa-spinner fa-spin text-4xl"></i></p>
         
-    </div>
+    </div> -->
     <section class="main">
     <header class=" flex justify-between items-center px-6 pt-6 pb-2 h-12 w-full text-[#333] bg-white fixed z-10 top-0 border-b-[1px] border-[#162950]">
         <div class="brand flex items-center">
@@ -61,7 +61,7 @@
        
         <section class="hero mt-6 flex flex-col justify-center items-center sm:flex-row-reverse sm:gap-12 lg:gap-20">
             <div class="hero-img bg-[url('./hero.jpg')] bg-cover bg-[size:] w-48 h-48 rounded-full md:w-72 md:h-72">
-                <img id="hero" src="./hero.jpg" alt="churchill's image" >
+                <!-- <img id="hero" src="./hero.jpg" alt="churchill's image" > -->
             </div>
             <div class="short-desc text-center mt-8 text-[#333] sm:text-left">
                 <p class="text-2xl">Hey, This is</p>
@@ -163,26 +163,22 @@
                 </a>
             </li>
         </ul>
-        <div class="scroll-to-top fixed bottom-[10px] right-0 w-10 h-10 bg-[#162950] text-white rounded-full  justify-center items-center hidden" ><i class="fa-solid fa-arrow-up fa-beat-fade"></i></div>
+        <a href="#" class="scroll-to-top fixed bottom-[10px] right-0 w-10 h-10 bg-[#162950] text-white rounded-full  justify-center items-center hidden" ><i class="fa-solid fa-arrow-up fa-beat-fade"></i></a>
     </footer>
 </section>
     <script>
         'use strict'
      
 
-        document.addEventListener('DOMContentLoaded', ()=>{
-            document.querySelector('.main').classList.remove('hidden')
-            const imgHero=document.querySelector('#hero')
-            imgHero.onload=()=>{
-                imgHero.classList.add('hidden')
-                document.querySelector('.loading').classList.add('hidden')
-            }
-
-         /*   if(imgHero.complete){
-                imgHero.classList.add('hidden')
-                document.querySelector('.loading').classList.add('hidden')
-            }*/
-        })
+        // document.addEventListener('DOMContentLoaded', ()=>{
+        //     document.querySelector('.main').classList.remove('hidden')
+        //     const imgHero=document.querySelector('#hero')
+            
+        //     if(imgHero.complete){
+        //         imgHero.classList.add('hidden')
+        //         document.querySelector('.loading').classList.add('hidden')
+        //     }
+        // })
        
         //handle showing the nav bar
         const menuIcon = document.querySelector('.menu-icon')
@@ -197,12 +193,12 @@
         }
 
     //handle auto scroll to top
-    const scrollIcon=document.querySelector('.scroll-to-top')
-    scrollIcon.onclick=(event)=>{
-        window.scrollTo(0, 0)
-    }
-
+    // scrollIcon.onclick=(event)=>{
+    //     window.scrollTo(0, 0)
+    // }
+    
     //handle showing the scroll to top icon when the page is scrolled
+    const scrollIcon=document.querySelector('.scroll-to-top')
     window.onscroll=(event)=>{
         const scrollHeight=window.scrollY
         if(scrollHeight>300){
