@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 body{
     /* font-family: 'Rubik', sans-serif; */
     font-family: 'Playpen Sans', cursive;
@@ -13,6 +15,10 @@ body{
     background-position:0px -3px;
 }
 
+iframe {
+    overflow: hidden;
+
+}
 @media(min-width:500px){
     #about-me .small-talk {
         font-size:.85rem

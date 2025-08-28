@@ -1,30 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth"><head>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>churchill nnanna</title>
     <!-- <link rel="shortcut icon" href="./image.png" type="image/x-icon"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&amp;family=Rubik:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body >
-    <!-- <div class="loading h-screen flex flex-col justify-center items-center fixed top-0 w-full z-40 bg-white ">
-        <p class="text-[#162950] text-rubik pb-8">Hold on just a moment..</p>
-        <p class=" text-[#162950] font-4xl"><i class="fa-solid fa-spinner fa-spin text-4xl"></i></p>
-        
-    </div> -->
-    <section class="main">
-    <header class=" flex justify-between items-center px-6 pt-6 pb-2 h-12 w-full text-[#333] bg-white fixed z-10 top-0 border-b-[1px] border-[#162950]">
+    <header class=" flex justify-between items-center font-poppins px-6 py-4 h-12 w-full text-[#333] bg-white fixed z-10 top-0 border-b-[1px] border-[#162950]">
         <div class="brand flex items-center">
             <div class="brand-icon w-4 h-4 rounded-full overfo bg-[url('./image.png')] rotate-[-180deg] bg-no-repeat bg-cover bg-[50px 50px]"></div>
             <p class="pl-1 text-xs text-[#333] font-bold font-[family:'Playpen Sans']">Churchill</p>
         </div>
-        <ul class="menu flex justify-center gap-2 text-[8px] bg-[#333] h-4 py-0.5 text-white w-full absolute left-[-800px] bottom-[-1rem] transition-all duration-500 ease-in-out z-20 show md:hidden">
+        <ul class="menu flex justify-center gap-2 text-[20px] bg-[#333] h-4 py-0.5 text-white w-full absolute left-[-800px] bottom-[-1rem] transition-all duration-500 ease-in-out z-20 show md:hidden">
             <li><a href="#projects">Projects</a></li>
             <li><a href="#technologies">Technologies</a></li>
             <li><a href="#about-me">About Me</a></li>
@@ -47,28 +44,53 @@
                 </a>
             </li>
         </ul>
-        <ul class="hidden justify-center gap-2 text-xs text-[#162950] py-1  md:flex">
-            <li><a href="#projects" class="font-bold ">Projects</a></li>
-            <li><a href="#technologies" class="font-bold ">Technologies</a></li>
-            <li><a href="#about-me" class="font-bold">About Me</a></li>
+        <ul class="hidden justify-center gap-4 text-base font-medium text-[#162950] py-1  md:flex">
+            <li><a href="#projects" class="hover:underline focus:underline">Projects</a></li>
+            <li><a href="#technologies" class="hover:underline focus:underline ">Technologies</a></li>
+            <li><a href="#about-me" class="hover:underline focus:underline">About Me</a></li>
         </ul>
         <div class="menu-icon w-4 h-4  md:hidden">
             <!-- <?xml version="1.0" encoding="UTF-8"?> -->
             <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20" fill="#162950 "><path d="M0,3.5c0-.83,.67-1.5,1.5-1.5H17.5c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5H1.5c-.83,0-1.5-.67-1.5-1.5Zm17.5,14.5H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H17.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Zm5-8H6.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H22.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Z"></path></svg>
         </div>
     </header>
-    <main class="mt-12 pt-8 sm:px-8 relative">
-       
-        <section class="hero mt-6 flex flex-col justify-center items-center sm:flex-row-reverse sm:gap-12 lg:gap-20">
-            <div class="hero-img bg-[url('./hero.jpg')] bg-cover bg-[size:] w-48 h-48 rounded-full md:w-72 md:h-72">
-                <!-- <img id="hero" src="./hero.jpg" alt="churchill's image" > -->
-            </div>
-            <div class="short-desc text-center mt-8 text-[#333] sm:text-left">
-                <p class="text-2xl">Hey, This is</p>
-                <p class="text-3xl">Churchill Nnanna</p>
-                <p class="text-base"> an interactive web developer</p>
-            </div>
 
+    <main class="pt-8 relative z-0">
+        <section id="hero" class="font-quick-sand relative flex flex-col-reverse items-center justify-center md:flex-row md:justify-center sm:gap-12 lg:gap-20 lg:min-h-[100svh] px-8 py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
+
+        <!-- Text Side -->
+        <div class="max-w-xl text-center sm:text-left z-10 mt-4 md lg:mt-0">
+            <h1 class="text-4xl md:text-5xl mb-4">Hi, I’m  <span class="font-medium font-">Churchill</span> 👋</h1>
+            <p id="typing" class="text-lg md:text-xl text-blue-400 font-semibold h-8 mb-6"></p>
+            <p class="text-gray-300 mb-6">
+            I build fast, interactive, and modern web apps using React, Tailwind, and JavaScript.
+            </p>
+            <div class="flex items-center gap-2 space-x-4">
+            <a href="#projects" class="hidden md:block px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">View My Work</a>
+            <a href="#projects" class="md:hidden px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">My Work</a>
+            <a href="/resume.pdf" class="px-6 py-3 border border-gray-400 rounded-xl hover:bg-gray-700 transition">Resume</a>
+            </div>
+        </div>
+
+        <!-- Image Side -->
+        <div class="relative mb-12 sm:mb-0">
+            <!-- Floating Icons -->
+            <img src="/icons/tailwind-css.webp" class="floating-icon absolute -top-6 -right-6 w-10 h-10 opacity-80" alt="TailwindCSS">
+            <i class="fa-brands fa-square-js text-4xl text-yellow-300 floating-icon absolute -bottom-10 xl:-bottom-16 left-1/2 -translate-x-1/2 w-10 h-10 opacity-80"></i>
+             <i class="fa-brands fa-react text-4xl text-green-400  floating-icon absolute -top-8 -left-6 w-10 h-10 opacity-80"></i>
+
+            <!-- Profile Image -->
+            <div class="w-48 h-48 md:w-72 md:h-72 lg:w-[25rem] lg:h-[25rem]  rounded-full border-4 border-blue-500 shadow-xl overflow-hidden relative z-10">
+                <img src="./hero.webp" alt="Churchill's photo" class="w-full h-full object-cover object-top">
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+            <div class="animate-bounce text-gray-400 cursor-pointer" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
+            ↓
+            </div>
+        </div>
         </section>
         <section class="pt-16 lg:mx-40 " id="about-me">
             <p class="text-[#162950] pl-4 pb-4 text-lg font-bold font-rubik">About Me</p>
@@ -79,17 +101,21 @@
         <section class="pt-16 flex flex-col items-center px-4"  id="projects">
             <p class="text-[#162950] text-lg font-bold self-start font-rubik pb-4 lg:mx-40">Projects</p>
         <div class="container flex flex-col items-center md:flex-row md:justify-center md:items-stretch md:gap-2">
-                <div class="moviebox bg-[#D6D6D6] text-[#3d3b3b] py-8 px-8  mb-6 md:flex md:flex-col ">
+                <div class="moviebox bg-[#D6D6D6] text-[#3d3b3b] py-8 md:px-8  mb-6 md:flex md:flex-col ">
+                    <iframe src="https://moviebox-hng-chapter-codes.vercel.app" frameborder="0" class="h-[400px] overflow-hidden"></iframe>
                     <p class=" text-lg text-center text-[#162950] font-bold py-4 leading-10 ">Moviebox</p>
                     <div class="desc text-xs grow"> Moviebox is a movie app to query and get the latest movies. It consumes the TMDB movie API, and users can search for their favourite movies and also see details about them. The build proces makes use of the React.js Library and Tailwindcss.</div>
                     <a href="https://moviebox-hng-chapter-codes.vercel.app" target="_blank" class="visit mt-8 text-base rounded-full px-8 py-2 bg-[#333] text-[#D6D6D6] inline-block justify-self-end self-center"><i class="fa-solid fa-globe fa-beat-fade pr-3"></i>visit</a>
                 </div>
-                <div class="tictactoe text-[#D6D6D6] bg-[#333333] py-8 px-8 mb-6 md:flex md:flex-col">
+                <div class="tictactoe text-[#D6D6D6] bg-[#333333] py-8 md:px-8 mb-6 md:flex md:flex-col">
+                    <iframe src="https://tictactoe-gray-mu.vercel.app/" frameborder="0" class="h-[400px] bg-white"></iframe>
                     <p class=" text-lg text-center font-bold py-4 leading-10 ">Tictac Toe</p>
                     <div class="desc text-xs grow">This is a simple, single-player tictac-toe demo game built using React.js. Players can track the game using history during play time, and revert changes if they want to.</div>
                     <a href="https://tictactoe-gray-mu.vercel.app/" target="_blank" class="visit mt-8 text-base rounded-full px-8 py-2 text-[#333] bg-[#D6D6D6] inline-block justify-self-end self-center"><i class="fa-solid fa-globe fa-beat-fade pr-3"></i>visit</a>
                 </div>
-                <div class="frontend-mentor-ui-challenge bg-[#D6D6D6] text-[#333333] py-8 px-8  mb-6 md:flex md:flex-col">
+                <div class="frontend-mentor-ui-challenge bg-[#D6D6D6] text-[#333333] py-8 md:px-8  mb-6 md:flex md:flex-col">
+                    <iframe src="https://chapter-codes.github.io/frontendmentor-summary-ui/" frameborder="0" class="h-[400px] bg-wh"></iframe>
+                    <iframe src="" frameborder="0" cla></iframe>
                     <p class=" text-lg text-center text-[#162950] font-bold py-4 leading-10">Summary UI</p>
                     <div class="desc text-xs grow"> A <a class="underline" href="https://frontendmentor.io">Frontend mentor</a> UI challenge to replicate a UI design using code. The design was replicated using Tailwindcss library and HTML. </div>
                     <a href="https://chapter-codes.github.io/frontendmentor-summary-ui/" target="_blank" class="visit mt-8 text-base rounded-full px-8 py-2 bg-[#333] text-[#D6D6D6] inline-block self-center"><i class="fa-solid fa-globe fa-beat-fade pr-3"></i>visit</a>
@@ -144,8 +170,9 @@
         </div>
         </section>
     </main>
+
     <footer class="py-8 flex flex-col  gap-4 items-center md:py-12">
-         <a href="mailto:nnannachurchill@gmail.com" class="text-[#333]"> <i class="fas fa-paper-plane pr-2 text-lg"></i>nnannachurchill@gmail.com</a>
+        <a href="mailto:nnannachurchill@gmail.com" class="text-[#333]"> <i class="fas fa-paper-plane pr-2 text-lg"></i>nnannachurchill@gmail.com</a>
         <ul class="contact flex  gap-4 text-[#333] ">
             <li class="w-2">
                 <a href="https://github.com/chapter-codes">
@@ -165,21 +192,52 @@
         </ul>
         <a href="#" class="scroll-to-top fixed bottom-[10px] right-0 w-10 h-10 bg-[#162950] text-white rounded-full  justify-center items-center hidden" ><i class="fa-solid fa-arrow-up fa-beat-fade"></i></a>
     </footer>
-</section>
+
+
+    <!-- scripts -->
+    <script>
+        // Typing Effect
+        const roles = ["React Developer", "Frontend Engineer", "Data Enthusiast"];
+        const typingElement = document.getElementById("typing");
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            if (!deleting) {
+            typingElement.textContent = currentRole.substring(0, charIndex++);
+            if (charIndex > currentRole.length) {
+                deleting = true;
+                setTimeout(typeEffect, 1200); // pause before deleting
+                return;
+            }
+            } else {
+            typingElement.textContent = currentRole.substring(0, charIndex--);
+            if (charIndex < 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+            }
+            setTimeout(typeEffect, deleting ? 60 : 120);
+        }
+
+        typeEffect();
+
+        // Floating Icons Animation
+        const icons = document.querySelectorAll(".floating-icon");
+        icons.forEach((icon, i) => {
+            let angle = 0;
+            setInterval(() => {
+            angle += 0.02 + i * 0.005;
+            icon.style.transform = `translateY(${Math.sin(angle) * 6}px)`;
+            }, 30);
+        });
+    </script>
+
     <script>
         'use strict'
-     
-
-        // document.addEventListener('DOMContentLoaded', ()=>{
-        //     document.querySelector('.main').classList.remove('hidden')
-        //     const imgHero=document.querySelector('#hero')
-            
-        //     if(imgHero.complete){
-        //         imgHero.classList.add('hidden')
-        //         document.querySelector('.loading').classList.add('hidden')
-        //     }
-        // })
-       
         //handle showing the nav bar
         const menuIcon = document.querySelector('.menu-icon')
         const menu = document.querySelector('.menu')
@@ -191,24 +249,19 @@
            menu.classList.toggle('show')
             console.log(this.classList, menu)
         }
-
-    //handle auto scroll to top
-    // scrollIcon.onclick=(event)=>{
-    //     window.scrollTo(0, 0)
-    // }
     
-    //handle showing the scroll to top icon when the page is scrolled
-    const scrollIcon=document.querySelector('.scroll-to-top')
-    window.onscroll=(event)=>{
-        const scrollHeight=window.scrollY
-        if(scrollHeight>300){
-            scrollIcon.classList.replace('hidden','flex')
-        }else{
-            scrollIcon.classList.replace('flex', 'hidden')
+        //handle showing the scroll to top icon when the page is scrolled
+        const scrollIcon=document.querySelector('.scroll-to-top')
+        window.onscroll=(event)=>{
+            const scrollHeight=window.scrollY
+            if(scrollHeight>300){
+                scrollIcon.classList.replace('hidden','flex')
+            }else{
+                scrollIcon.classList.replace('flex', 'hidden')
+            }
         }
-       }
-
     </script>
 
 
-</body></html>
+</body>
+</html>
