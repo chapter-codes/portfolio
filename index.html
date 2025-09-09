@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>churchill nnanna</title>
     <!-- <link rel="shortcut icon" href="./image.png" type="image/x-icon"> -->
+     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -12,11 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&amp;family=Rubik:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://unpkg.com/lenis@1.3.10/dist/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body >
-    <header class=" flex justify-between items-center font-poppins py-4 h-12 w-full text-[#333] bg-white fixed z-10 top-0 border-b-[1px] border-[#162950] ">
+    <header class=" flex justify-between items-center font-poppins py-4 h-12 w-full text-[#333] bg-white dark:bg-slate-900 fixed z-10 top-0 border-b-[1px] border-[#162950] ">
         <div class="w-[95%] md:w-4/5 max-w-[1440px] mx-auto flex justify-between items-center ">
             <div class="brand flex items-center">
                 <div class="brand-icon w-4 h-4 rounded-full overfo bg-[url('./image.png')] rotate-[-180deg] bg-no-repeat bg-cover bg-[50px 50px]"></div>
@@ -59,7 +62,7 @@
     </header>
 
     <main class="relative z-0">
-        <section id="hero" class="font-quick-sand relative flex flex-col-reverse items-center justify-center md:flex-row md:justify-center sm:gap-12 lg:gap-52 lg:min-h-[100svh] px-8 pt-28 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
+        <section id="hero" class="font-quick-sand relative flex flex-col-reverse items-center justify-center md:flex-row md:justify-center sm:gap-12 lg:min-h-[100svh] px-8 pt-28 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
 
         <!-- Text Side -->
         <div class="max-w-xl text-center sm:text-left z-10 mt-4 md lg:mt-0">
@@ -96,7 +99,7 @@
         </div>
         </section>
 
-        <section id="about" class="relative font-poppins px-8 py-20 bg-slate-50 text-slate-800">
+        <section id="about" class="relative font-poppins px-8 py-20 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-gray-500">
             <div class=" lg:w-4/5 max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Image -->
                 <div class="relative flex flex-col items-center gap-2">
@@ -111,13 +114,13 @@
                 <!-- Text -->
                 <div class="space-y-6">
                 <h2 class="text-center md:text-left text-3xl md:text-3xl font-bold font-quick-sand">About Me</h2>
-                <p class="text-lg md:text-lg text-gray-600 leading-relaxed">
+                <p class="text-lg md:text-lg text-gray-600 leading-relaxed sm:px-6">
                     Hey 👋 I’m <span class="font-semibold text-blue-600">Churchill</span>, a 
                     <span class="font-semibold">Frontend Developer</span> who loves bringing ideas 
                     to life with clean code and creative design. I specialize in building 
                     fast, modern, and scalable web apps that not only work great — but feel great. 
                 </p>
-                <p class="text-lg md:text-lg text-gray-600 leading-relaxed">
+                <p class="text-lg md:text-lg text-gray-600 leading-relaxed sm:px-6">
                     I thrive at the intersection of design and engineering: solving complex problems, 
                     crafting intuitive interfaces, and always learning what’s next in tech. My goal 
                     is simple — to deliver experiences that balance <span class="font-semibold">performance</span>, 
@@ -126,19 +129,19 @@
 
                 <!-- Highlights -->
                 <div class="grid sm:grid-cols-2 gap-4">
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-black text-white shadow hover:shadow-md transition fade-in">
                     <h3 class="font-semibold text-lg mb-2">💡 What I Do</h3>
                     <p class=" text-base">Build responsive UIs with React & Tailwind, focusing on speed and usability.</p>
                     </div>
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-black text-white shadow hover:shadow-md transition fade-in">
                     <h3 class="font-semibold text-lg mb-2">🎯 Values</h3>
                     <p class=" text-base">Clean, maintainable code and a passion for turning ideas into polished products.</p>
                     </div>
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-black text-white shadow hover:shadow-md transition fade-in">
                     <h3 class="font-semibold text-lg mb-2">📚 Learning</h3>
                     <p class=" text-base">Currently diving deeper into Next.js, system design, and AI-powered apps.</p>
                     </div>
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-black text-white shadow hover:shadow-md transition fade-in">
                     <h3 class="font-semibold text-lg mb-2">🤝 Collaboration</h3>
                     <p class=" text-base">I love teamwork — whether shipping features in sprints or brainstorming new ideas.</p>
                     </div>
@@ -357,75 +360,9 @@
         <a href="#" class="scroll-to-top fixed bottom-[10px] right-0 w-10 h-10 bg-[#162950] text-white rounded-full  justify-center items-center hidden" ><i class="fa-solid fa-arrow-up fa-beat-fade"></i></a>
     </footer>
 
-
     <!-- scripts -->
-    <script>
-        // Typing Effect
-        const roles = ["React Developer", "Frontend Engineer", "Data Enthusiast"];
-        const typingElement = document.getElementById("typing");
-
-        let roleIndex = 0;
-        let charIndex = 0;
-        let deleting = false;
-
-        function typeEffect() {
-            const currentRole = roles[roleIndex];
-            if (!deleting) {
-            typingElement.textContent = currentRole.substring(0, charIndex++);
-            if (charIndex > currentRole.length) {
-                deleting = true;
-                setTimeout(typeEffect, 1200); // pause before deleting
-                return;
-            }
-            } else {
-            typingElement.textContent = currentRole.substring(0, charIndex--);
-            if (charIndex < 0) {
-                deleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-            }
-            }
-            setTimeout(typeEffect, deleting ? 60 : 120);
-        }
-
-        typeEffect();
-
-        // Floating Icons Animation
-        const icons = document.querySelectorAll(".floating-icon");
-        icons.forEach((icon, i) => {
-            let angle = 0;
-            setInterval(() => {
-            angle += 0.02 + i * 0.005;
-            icon.style.transform = `translateY(${Math.sin(angle) * 6}px)`;
-            }, 30);
-        });
-    </script>
-
-    <script>
-        'use strict'
-        //handle showing the nav bar
-        const menuIcon = document.querySelector('.menu-icon')
-        const menu = document.querySelector('.menu')
-        if(menuIcon){
-            menuIcon.addEventListener('click', handleClick)
-        }
-        function handleClick(event){
-           !menu.classList.contains('show')? menu.classList.replace('left-0', 'left-[-800px]'): menu.classList.replace('left-[-800px]', 'left-0')
-           menu.classList.toggle('show')
-            console.log(this.classList, menu)
-        }
-    
-        //handle showing the scroll to top icon when the page is scrolled
-        const scrollIcon=document.querySelector('.scroll-to-top')
-        window.onscroll=(event)=>{
-            const scrollHeight=window.scrollY
-            if(scrollHeight>300){
-                scrollIcon.classList.replace('hidden','flex')
-            }else{
-                scrollIcon.classList.replace('flex', 'hidden')
-            }
-        }
-    </script>
-
+    <script src="./app.js" ></script>
+    <script src="motion.js"></script>
 
 </body>
 </html>
