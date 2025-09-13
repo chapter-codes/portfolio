@@ -1,7 +1,5 @@
 'use strict'
-if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
-    document.documentElement.classList.add('dark')
-}
+
 // Typing Effect
 const roles = ["React Developer", "Frontend Engineer", "AI Enthusiast"];
 const typingElement = document.getElementById("typing");
