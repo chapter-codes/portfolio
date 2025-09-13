@@ -18,10 +18,7 @@ body{
     background-position:0px -3px;
 }
 
-iframe {
-    overflow: hidden;
 
-}
 @media(min-width:768px){
     :root{
         font-size: 16px;
@@ -57,4 +54,33 @@ iframe {
         line-height:1.2rem; */
 
     }
+}
+
+
+::view-transition-old(root){
+    /* position: relative; */
+    z-index: 10;
+    animation: slide-out 0.5s forwards;
+    /* transition: top 0.5s; */
+    
+}
+
+::view-transition-new(root) {
+    /* position: absolute; */
+    animation: slide-in 0.5s forwards;
+    /* transition: top 0.5s; */
+    
+}
+
+
+@keyframes slide-in{
+  0%   { top:0 }
+  /* 50%  { top: -50%  } */
+  100% { top: 0  }
+}
+
+
+@keyframes slide-out {
+  from { top:0 }
+  to  { top: 100%  }
 }

@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>churchill nnanna</title>
     <!-- <link rel="shortcut icon" href="./image.png" type="image/x-icon"> -->
+     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -12,17 +14,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&amp;family=Rubik:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://unpkg.com/lenis@1.3.10/dist/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body >
-    <header class=" flex justify-between items-center font-poppins py-4 h-12 w-full text-[#333] bg-white fixed z-10 top-0 border-b-[1px] border-[#162950] ">
+    <header class=" flex justify-between items-center font-poppins py-4 h-12 w-full text-gray-300  bg-slate-900 dark:bg-[#0a0a0a] from-slate-900 to-slate-800 dark:from-[#121212]  dark:to-[#0a0a0a] fixed z-10 top-0 border-b-[1px] border-[#162950] ">
         <div class="w-[95%] md:w-4/5 max-w-[1440px] mx-auto flex justify-between items-center ">
             <div class="brand flex items-center">
                 <div class="brand-icon w-4 h-4 rounded-full overfo bg-[url('./image.png')] rotate-[-180deg] bg-no-repeat bg-cover bg-[50px 50px]"></div>
-                <a href="#" class=" mt-1 pl-1 text-xs text-[#333] font-bold font-rubik ">Churchill</a>
+                <a href="#" class=" mt-1 pl-1 text-xs text-gray-300  font-bold font-rubik ">Churchill</a>
             </div>
-            <ul class="menu flex justify-center gap-2 text-sm bg-gradient-to-br from-slate-900 to-slate-800 py-2 text-white w-screen absolute left-[-800px] top-12 transition-all duration-500 ease-in-out z-20 show md:hidden">
+            <ul class="menu flex justify-center gap-2 text-sm bg-gradient-to-br from-slate-900 to-slate-800 py-2 text-gray-300 dark:text-white w-screen absolute left-[-800px] top-12 transition-all duration-500 ease-in-out z-20 show md:hidden">
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#technologies">Technologies</a></li>
                 <li><a href="#about">About Me</a></li>
@@ -46,20 +50,45 @@
                     </a>
                 </li>
             </ul>
-            <ul class="hidden justify-center gap-4 text-base font-medium text-[#162950] py-1  md:flex">
-                <li><a href="#projects" class="hover:underline focus:underline">Projects</a></li>
-                <li><a href="#technologies" class="hover:underline focus:underline ">Technologies</a></li>
-                <li><a href="#about-me" class="hover:underline focus:underline">About Me</a></li>
-            </ul>
-            <div class="menu-icon w-4 h-4  md:hidden">
-                <!-- <?xml version="1.0" encoding="UTF-8"?> -->
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20" fill="#162950 "><path d="M0,3.5c0-.83,.67-1.5,1.5-1.5H17.5c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5H1.5c-.83,0-1.5-.67-1.5-1.5Zm17.5,14.5H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H17.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Zm5-8H6.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H22.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Z"></path></svg>
+            <div class="flex items-center gap-8">
+              <ul class=" hidden md:flex justify-center gap-4 text-base font-medium text-gray-300   py-1"  >
+                  <li><a href="#projects" class="hover:underline focus:underline">Projects</a></li>
+                  <li><a href="#technologies" class="hover:underline focus:underline ">Technologies</a></li>
+                  <li><a href="#about-me" class="hover:underline focus:underline">About Me</a></li>
+              </ul>
+            
+               <!-- <div class="flex items-center flex-row-reverse gap-6 md:hidden"> -->
+              <div class=" md:hidden relative menu-icon w-4 h-4 right-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20" fill="#fff "><path d="M0,3.5c0-.83,.67-1.5,1.5-1.5H17.5c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5H1.5c-.83,0-1.5-.67-1.5-1.5Zm17.5,14.5H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H17.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Zm5-8H6.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H22.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Z"></path></svg>
+               </div>
+                <button id="theme-toggle"
+                  class="relative w-14 h-8 flex items-center rounded-full bg-gray-600 dark:bg-gray-700 transition-colors duration-500">
+                  <span id="toggleCircle"
+                    class="absolute left-0 dark:left-auto dark:translate-x-6 flex items-center justify-center w-6 h-6 p-0.5  size-6 mx-1 bg-slate-800 dark:bg-white  rounded-full shadow-md transform transition-transform duration-300">
+                    
+                    <!-- Light mode SVG -->
+                    <svg id="lightIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                      viewBox="0 0 24 24" class="block dark:hidden text-white w-full">
+                      <g fill="none" stroke="currentColor" stroke-width="1">
+                        <circle cx="12" cy="12" r="3.5" />
+                        <path stroke-linecap="round" d="M12 5V3m0 18v-2M5 12H3m18 0h-2M7.8 7.8L6.4 6.4m11.2 11.2l-1.4-1.4m0-9.8l1.4-1.4M6.4 17.6l1.4-1.4" />
+                      </g>
+                    </svg>
+
+                    <!-- Dark mode SVG -->
+                    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                      viewBox="0 0 24 24" class="hidden dark:block text-[#0a0a0a]">
+                      <path fill="currentColor"
+                        d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79Z" />
+                    </svg>
+                  </span>
+                </button>
             </div>
         </div>    
     </header>
 
     <main class="relative z-0">
-        <section id="hero" class="font-quick-sand relative flex flex-col-reverse items-center justify-center md:flex-row md:justify-center sm:gap-12 lg:gap-52 lg:min-h-[100svh] px-8 pt-28 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white overflow-hidden">
+        <section id="hero" class="font-quick-sand relative flex flex-col-reverse items-center justify-center md:flex-row md:justify-center sm:gap-12 lg:min-h-[100svh] px-8 pt-28 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 dark:from-[#121212]  dark:to-[#0a0a0a] text-white overflow-hidden">
 
         <!-- Text Side -->
         <div class="max-w-xl text-center sm:text-left z-10 mt-4 md lg:mt-0">
@@ -71,7 +100,10 @@
             <div class="flex items-center justify-center md:justify-start gap-2 space-x-4">
                 <a href="#projects" class="hidden sm:block px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">View My Work</a>
                 <a href="#projects" class="sm:hidden px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">My Work</a>
-                <a href="/resume.pdf" class="px-6 py-3 border border-gray-400 rounded-xl hover:bg-gray-700 transition">Resume</a>
+                <a href="https://docs.google.com/document/d/1IkcVaqwiqt2Kh35VrxeYB6CxYXgvF6ZtTiksG17iSAs/edit?usp=sharing" target="_blank" class="px-6 py-3 border border-gray-400 rounded-xl hover:bg-gray-700 transition">
+                  Resume
+                </a>
+             
             </div>
         </div>
 
@@ -83,7 +115,7 @@
              <i class="fa-brands fa-react text-4xl text-green-400  floating-icon absolute -top-8 -left-6 w-10 h-10 opacity-80"></i>
 
             <!-- Profile Image -->
-            <div class="w-48 h-48 md:w-72 md:h-72 lg:w-[25rem] lg:h-[25rem]  rounded-full border-4 border-blue-500 shadow-xl overflow-hidden relative z-10">
+            <div class="w-48 h-48 md:w-72 md:h-72 lg:w-[25rem] lg:h-[25rem]  rounded-full border-4 border-blue-500 dark:border-slate-500 shadow-xl overflow-hidden relative z-10">
                 <img src="./hero.webp" alt="Churchill's photo" class="w-full h-full object-cover object-top">
             </div>
         </div>
@@ -95,9 +127,8 @@
             </div>
         </div>
         </section>
-
-        <section id="about" class="relative font-poppins px-8 py-20 bg-slate-50 text-slate-800">
-            <div class=" lg:w-4/5 max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <section id="about" class="relative font-poppins px-8 lg:px-0 py-20 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-gray-600">
+            <div class=" lg:w-4/5 max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-12 items-center px-4 sm:px-10 lg:px-0">
                 <!-- Image -->
                 <div class="relative flex flex-col items-center gap-2">
                     <div class="w-4/5 lg:w-full md:h-auto rounded-2xl overflow-hidden shadow-xl mx-auto">
@@ -109,15 +140,15 @@
                 </div>
 
                 <!-- Text -->
-                <div class="space-y-6">
+                <div class="space-y-6 lg:pl-4 text-gray-600 dark:text-gray-300">
                 <h2 class="text-center md:text-left text-3xl md:text-3xl font-bold font-quick-sand">About Me</h2>
-                <p class="text-lg md:text-lg text-gray-600 leading-relaxed">
+                <p class="text-lg md:text-lg leading-relaxed sm:px-6 lg:px-0">
                     Hey 👋 I’m <span class="font-semibold text-blue-600">Churchill</span>, a 
                     <span class="font-semibold">Frontend Developer</span> who loves bringing ideas 
                     to life with clean code and creative design. I specialize in building 
                     fast, modern, and scalable web apps that not only work great — but feel great. 
                 </p>
-                <p class="text-lg md:text-lg text-gray-600 leading-relaxed">
+                <p class="text-lg md:text-lg leading-relaxed sm:px-6  lg:px-0">
                     I thrive at the intersection of design and engineering: solving complex problems, 
                     crafting intuitive interfaces, and always learning what’s next in tech. My goal 
                     is simple — to deliver experiences that balance <span class="font-semibold">performance</span>, 
@@ -126,72 +157,40 @@
 
                 <!-- Highlights -->
                 <div class="grid sm:grid-cols-2 gap-4">
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
-                    <h3 class="font-semibold text-lg mb-2">💡 What I Do</h3>
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-[#0a0a0a] text-white shadow hover:shadow-md transition fade-in">
+                    <h3 class="font-semibold text-lg mb-2 whitespace-nowrap">💡 What I Do</h3>
                     <p class=" text-base">Build responsive UIs with React & Tailwind, focusing on speed and usability.</p>
                     </div>
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
-                    <h3 class="font-semibold text-lg mb-2">🎯 Values</h3>
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-[#0a0a0a] text-white shadow hover:shadow-md transition fade-in">
+                    <h3 class="font-semibold text-lg mb-2 whitespace-nowrap">🎯 Values</h3>
                     <p class=" text-base">Clean, maintainable code and a passion for turning ideas into polished products.</p>
                     </div>
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
-                    <h3 class="font-semibold text-lg mb-2">📚 Learning</h3>
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-[#0a0a0a] text-white shadow hover:shadow-md transition fade-in">
+                    <h3 class="font-semibold text-lg mb-2 whitespace-nowrap">📚 Learning</h3>
                     <p class=" text-base">Currently diving deeper into Next.js, system design, and AI-powered apps.</p>
                     </div>
-                    <div class="p-4 rounded-xl bg-slate-800 text-white shadow hover:shadow-md transition fade-in">
-                    <h3 class="font-semibold text-lg mb-2">🤝 Collaboration</h3>
+                    <div class="p-4 rounded-xl bg-slate-800 dark:bg-[#0a0a0a] text-white shadow hover:shadow-md transition fade-in">
+                    <h3 class="font-semibold text-lg mb-2 whitespace-nowrap">🤝 Collaboration</h3>
                     <p class=" text-base">I love teamwork — whether shipping features in sprints or brainstorming new ideas.</p>
                     </div>
                 </div>
                 </div>
             </div>
         </section>
-
-    
-        <!-- <section class="pt-16 flex flex-col items-center px-4 font-quick-sand"  id="projects">
-            <p class="w-full text-center text-[#162950] text-3xl font-bold py-10 lg:mx-40">Projects</p>
-            <div class="container flex flex-col items-center md:flex-row md:justify-center md:items-stretch md:gap-2">
-                <div class="moviebox bg-[#D6D6D6] text-[#3d3b3b] py-8 md:px-8  mb-6 md:flex md:flex-col ">
-                    <p class=" text-lg text-center text-[#162950] font-bold py-4 leading-10 ">Moviebox</p>
-                    <div class="w-[300px] h-[400px]">
-                        <img src="./screenshots/moviebox.jpg" alt="Moviebox app screenshot" class="h-full w-full object-top object-cover"/>
-                    </div>
-                    <div class="desc text-xs grow"> Moviebox is a movie app to query and get the latest movies. It consumes the TMDB movie API, and users can search for their favourite movies and also see details about them. The build proces makes use of the React.js Library and Tailwindcss.</div>
-                    <a href="https://moviebox-hng-chapter-codes.vercel.app" target="_blank" class="visit mt-8 text-base rounded-full px-8 py-2 bg-[#333] text-[#D6D6D6] inline-block justify-self-end self-center"><i class="fa-solid fa-globe fa-beat-fade pr-3"></i>visit</a>
-                </div>
-                <div class="tictactoe text-[#D6D6D6] bg-[#333333] py-8 md:px-8 mb-6 md:flex md:flex-col">
-                    <p class=" text-lg text-center font-bold py-4 leading-10 ">Tictac Toe</p>
-                    <div class="w-[300px] h-[400px]">
-                        <img src="./screenshots/tictactoe.jpg" alt="Moviebox app screenshot" class="h-full w-full object-top object-cover"/>
-                    </div>
-                    <div class="desc text-xs grow">This is a simple, single-player tictac-toe demo game built using React.js. Players can track the game using history during play time, and revert changes if they want to.</div>
-                    <a href="https://tictactoe-gray-mu.vercel.app/" target="_blank" class="visit mt-8 text-base rounded-full px-8 py-2 text-[#333] bg-[#D6D6D6] inline-block justify-self-end self-center"><i class="fa-solid fa-globe fa-beat-fade pr-3"></i>visit</a>
-                </div>
-                <div class="frontend-mentor-ui-challenge bg-[#D6D6D6] text-[#333333] py-8 md:px-8  mb-6 md:flex md:flex-col">
-                    <p class=" text-lg text-center text-[#162950] font-bold py-4 leading-10">Summary UI</p>
-                    <div class="w-[300px] h-[400px]">
-                        <img src="./screenshots/frontendmentor.jpg" alt="Moviebox app screenshot" class="h-full w-full object-right object-cover"/>
-                    </div>
-                    <div class="desc text-xs grow"> A <a class="underline" href="https://frontendmentor.io">Frontend mentor</a> UI challenge to replicate a UI design using code. The design was replicated using Tailwindcss library and HTML. </div>
-                    <a href="https://chapter-codes.github.io/frontendmentor-summary-ui/" target="_blank" class="visit mt-8 text-base rounded-full px-8 py-2 bg-[#333] text-[#D6D6D6] inline-block self-center"><i class="fa-solid fa-globe fa-beat-fade pr-3"></i>visit</a>
-                </div>      
-            </div> 
-        </section>
-         -->
         
-      <section class="font-poppins py-16 bg-gradient-to-br from-gray-50 to-slate-200" id="projects">
+      <section class="font-poppins py-16 bg-gradient-to-br from-gray-50 to-slate-200 dark:from-[#121212]  dark:to-[#121212]" id="projects">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold font-quick-sand text-gray-900 mb-10 text-center">Projects</h2>
+    <h2 class="text-3xl font-bold font-quick-sand text-gray-900 dark:text-white mb-10 text-center">Projects</h2>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
 
       <!-- Live Project -->
-      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition  dark:bg-[#0a0a0a] dark:border dark:border-slate-700 sm:max-w-[400px] lg:max-w-max">
         <img src="./screenshots/abeniskitchen.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
         <div class="grow flex flex-col items-start p-6 min-h-[304px] border-t">
           <span class="inline-block px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full my-6">Live Project</span>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Abeni’s Kitchen</h3>
-          <p class="text-gray-600 my-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Abeni’s Kitchen</h3>
+          <p class="text-gray-600 dark:text-gray-400 my-4">
             A vibrant platform showcasing authentic Nigerian and African delicacies, connecting food lovers to rich flavors and recipes.
           </p>
           <div class="grow"></div>
@@ -200,12 +199,12 @@
       </div>
 
       <!-- Template: Spa Treatment -->
-      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition  dark:bg-[#0a0a0a] dark:border dark:border-slate-700">
         <img src="./screenshots/spa.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
         <div class="grow flex flex-col items-start p-6 min-h-[304px]">
           <span class="inline-block px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-full my-6">Template</span>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Spa Treatment</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Spa Treatment</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
             A clean and modern spa website template highlighting wellness services such as massage therapy, facials, and nail care.
           </p>
           <div class="grow"></div>
@@ -215,12 +214,12 @@
       </div>
 
       <!-- Template: Kash Juice -->
-      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition  dark:bg-[#0a0a0a] dark:border dark:border-slate-700">
         <img src="./screenshots/kash-juice.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
         <div class="grow flex flex-col items-start p-6 min-h-[304px] ">
           <span class="inline-block px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-full my-6">Template</span>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Kash Juice</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Kash Juice</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
             A stylish UI template for organic juice brands, showcasing fresh flavors like orange, strawberry, and blueberry.
           </p>
           <div class="grow"></div>
@@ -230,12 +229,12 @@
       </div>
 
       <!-- In-progress: Beejaytech -->
-      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
         <img src="./screenshots/beejaytech.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
         <div class="grow flex flex-col items-start p-6 min-h-[304px]">
           <span class="inline-block px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full my-6">In Progress</span>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Beejaytech</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Beejaytech</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
             A CAC registration platform helping businesses and entrepreneurs establish and manage their legal brand identity in Nigeria.
           </p>
           <div class="grow"></div>
@@ -244,12 +243,12 @@
       </div>
 
       <!-- Early Projects: TicTacToe -->
-      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
         <img src="./screenshots/tictactoe.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
         <div class="grow flex flex-col items-start p-6 min-h-[304px]">
           <span class="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full my-6">Early Project</span>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Tic Tac Toe</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Tic Tac Toe</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
             A simple interactive Tic Tac Toe game built to practice core web development fundamentals.
           </p>
           <div class="grow"></div>
@@ -258,12 +257,12 @@
       </div>
 
       <!-- Early Projects: MovieBox -->
-      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
         <img src="./screenshots/moviebox.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
         <div class="grow flex flex-col items-start p-6 min-h-[304px]">
           <span class="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full my-6">Early Project</span>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">MovieBox</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">MovieBox</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
             A movie search app that fetches film data from an external API and displays trending and popular titles.
           </p>
           <div class="grow"></div>
@@ -272,12 +271,12 @@
       </div>
 
       <!-- Early Projects: Frontend Mentor -->
-      <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition">
+      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
         <img src="./screenshots/frontendmentor.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
         <div class="grow flex flex-col items-start p-6 min-h-[304px]">
           <span class="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full my-6">Early Project</span>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Frontend Mentor Challenge</h3>
-          <p class="text-gray-600 mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Frontend Mentor Challenge</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
             A collection of solutions to Frontend Mentor challenges, focused on practicing responsive design and component layouts.
           </p>
           <div class="grow"></div>
@@ -290,57 +289,57 @@
 </section>
 
 
-         <section class="px-4 text-white bg-gradient-to-br from-slate-900 to-slate-800 pt-14 pb-14 lg:py-20 font-poppins" id="technologies">
-            <p class="pb-12 text-2xl text-center font-bold font-quick-sand">Technologies</p>
-            <div class="wrapper grid grid-cols-3 auto-rows-auto max-w-[1000px] mx-auto">
-                <div class="stack mb-6 font-rubik text-white">
-                    <div class=" flex flex-col justify-between items-center mb-2 rounded border-sm border-white">
-                        <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
-                        <p class=" pb-2">HTML</p>
-                    </div>
-                </div>    
-            <div class="stack mb-6 font-rubik">
-                <div class=" flex flex-col justify-between items-center mb-2">
-                    <i class="fa-brands fa-css3-alt text-4xl text-blue-500"></i>
-                    <p class="pb-2 mt-2">CSS</p>
+        <section class="px-4 text-white bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-800 pt-14 pb-14 lg:py-20 font-poppins" id="technologies">
+        <p class="pb-12 text-2xl text-center font-bold font-quick-sand">Technologies</p>
+        <div class="wrapper grid grid-cols-3 auto-rows-auto max-w-[1000px] mx-auto">
+            <div class="stack mb-6 font-rubik text-white">
+                <div class=" flex flex-col justify-between items-center mb-2 rounded border-sm border-white">
+                    <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
+                    <p class=" pb-2">HTML</p>
                 </div>
+            </div>    
+        <div class="stack mb-6 font-rubik">
+            <div class=" flex flex-col justify-between items-center mb-2">
+                <i class="fa-brands fa-css3-alt text-4xl text-blue-500"></i>
+                <p class="pb-2 mt-2">CSS</p>
             </div>
-            <div class="stack mb-6 font-rubik">
-                <div class=" flex flex-col justify-center  items-center mb-2">
-                    <i class="fa-brands fa-square-js text-4xl text-yellow-300"></i>
-                    <p class="pb-2 mt-2">JavaScript</p>
+        </div>
+        <div class="stack mb-6 font-rubik">
+            <div class=" flex flex-col justify-center  items-center mb-2">
+                <i class="fa-brands fa-square-js text-4xl text-yellow-300"></i>
+                <p class="pb-2 mt-2">JavaScript</p>
+            </div>
+        </div>
+        <div class="stack mb-6 font-rubik">
+            <div class=" flex flex-col justify-center items-center mb-2">
+                <i class="fa-brands fa-react text-4xl text-green-400"></i>
+                <p class="pb-2 mt-2">React.js</p>
+            </div>
+        </div> 
+        <div class="stack mb-6 font-rubik">
+            <div class=" flex flex-col items-center justify-center mb-2">
+                <img src="./icons/tailwind-css.webp" class="w-10"/>
+                <p class="mt-2">TailwindCSS</p>
+            </div>
+        </div>
+        <div class="stack pb-6 font-rubik">
+            <div class=" flex flex-col justify-between items-center mb-2 text-white">
+                <div class="bg-white p-2">
+                    <img src="./icons/Next.js logo - Brandlogos.net.svg"  class="w-8"/>
                 </div>
-            </div>
-            <div class="stack mb-6 font-rubik">
-                <div class=" flex flex-col justify-center items-center mb-2">
-                    <i class="fa-brands fa-react text-4xl text-green-400"></i>
-                    <p class="pb-2 mt-2">React.js</p>
-                </div>
-            </div> 
-            <div class="stack mb-6 font-rubik">
-                <div class=" flex flex-col items-center justify-center mb-2">
-                   <img src="./icons/tailwind-css.webp" class="w-10"/>
-                    <p class="mt-2">TailwindCSS</p>
-                </div>
-            </div>
-            <div class="stack pb-6 font-rubik">
-                <div class=" flex flex-col justify-between items-center mb-2 text-white">
-                    <div class="bg-white p-2">
-                        <img src="./icons/Next.js logo - Brandlogos.net.svg"  class="w-8"/>
-                    </div>
-                    <p class="pt-2 mt-1">Next.Js</p>
-                </div>              
-            </div>
+                <p class="pt-2 mt-1">Next.Js</p>
+            </div>              
+        </div>
         </div>
         </section>
     </main>
 
-    <footer class="py-8 flex flex-col  gap-4 items-center md:py-12">
-        <a href="mailto:nnannachurchill@gmail.com" class="text-[#333]"> <i class="fas fa-paper-plane pr-2 text-lg"></i>nnannachurchill@gmail.com</a>
-        <ul class="contact flex  gap-4 text-[#333] ">
+    <footer class="py-8 flex flex-col  text-[#333]  dark:bg-[#0a0a0a] dark:text-gray-400 gap-4 items-center md:py-12">
+        <a href="mailto:nnannachurchill@gmail.com" class=""> <i class="fas fa-paper-plane pr-2 text-lg"></i>nnannachurchill@gmail.com</a>
+        <ul class="contact flex  gap-4 ">
             <li class="w-2">
                 <a href="https://github.com/chapter-codes">
-                    <i class="fa-brands fa-github text-[#333]"></i>
+                    <i class="fa-brands fa-github "></i>
                 </a>
             </li>
             <li class="w-2">
@@ -354,78 +353,12 @@
                 </a>
             </li>
         </ul>
-        <a href="#" class="scroll-to-top fixed bottom-[10px] right-0 w-10 h-10 bg-[#162950] text-white rounded-full  justify-center items-center hidden" ><i class="fa-solid fa-arrow-up fa-beat-fade"></i></a>
+        <a href="#" class="scroll-to-top fixed bottom-[10px] right-2 w-10 h-10 bg-[#162950] dark:bg-[#0a0a0a] text-white dark:border dark:border-white rounded-full  justify-center items-center hidden" ><i class="fa-solid fa-arrow-up fa-beat-fade"></i></a>
     </footer>
 
-
     <!-- scripts -->
-    <script>
-        // Typing Effect
-        const roles = ["React Developer", "Frontend Engineer", "Data Enthusiast"];
-        const typingElement = document.getElementById("typing");
-
-        let roleIndex = 0;
-        let charIndex = 0;
-        let deleting = false;
-
-        function typeEffect() {
-            const currentRole = roles[roleIndex];
-            if (!deleting) {
-            typingElement.textContent = currentRole.substring(0, charIndex++);
-            if (charIndex > currentRole.length) {
-                deleting = true;
-                setTimeout(typeEffect, 1200); // pause before deleting
-                return;
-            }
-            } else {
-            typingElement.textContent = currentRole.substring(0, charIndex--);
-            if (charIndex < 0) {
-                deleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-            }
-            }
-            setTimeout(typeEffect, deleting ? 60 : 120);
-        }
-
-        typeEffect();
-
-        // Floating Icons Animation
-        const icons = document.querySelectorAll(".floating-icon");
-        icons.forEach((icon, i) => {
-            let angle = 0;
-            setInterval(() => {
-            angle += 0.02 + i * 0.005;
-            icon.style.transform = `translateY(${Math.sin(angle) * 6}px)`;
-            }, 30);
-        });
-    </script>
-
-    <script>
-        'use strict'
-        //handle showing the nav bar
-        const menuIcon = document.querySelector('.menu-icon')
-        const menu = document.querySelector('.menu')
-        if(menuIcon){
-            menuIcon.addEventListener('click', handleClick)
-        }
-        function handleClick(event){
-           !menu.classList.contains('show')? menu.classList.replace('left-0', 'left-[-800px]'): menu.classList.replace('left-[-800px]', 'left-0')
-           menu.classList.toggle('show')
-            console.log(this.classList, menu)
-        }
-    
-        //handle showing the scroll to top icon when the page is scrolled
-        const scrollIcon=document.querySelector('.scroll-to-top')
-        window.onscroll=(event)=>{
-            const scrollHeight=window.scrollY
-            if(scrollHeight>300){
-                scrollIcon.classList.replace('hidden','flex')
-            }else{
-                scrollIcon.classList.replace('flex', 'hidden')
-            }
-        }
-    </script>
-
+    <script src="./app.js" ></script>
+    <script src="motion.js"></script>
 
 </body>
 </html>
