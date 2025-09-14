@@ -43,7 +43,8 @@
     <script src="https://unpkg.com/lenis@1.3.10/dist/lenis.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <script src="./darkMode.js"></script>
+    <script src="./assets/js/darkMode.js"></script>
+     <script src="./assets/js/motion.js" defer></script>
 </head>
 
 <body >
@@ -115,23 +116,31 @@
     </header>
 
     <main class="relative z-0">
-        <section id="hero" class="font-quick-sand relative flex flex-col-reverse items-center justify-center md:flex-row md:justify-center sm:gap-12 lg:min-h-[100svh] px-8 pt-28 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 dark:from-[#121212]  dark:to-[#0a0a0a] text-white overflow-hidden">
+        <section id="hero" class="font-quick-sand relative flex flex-col-reverse items-center justify-center lg:flex-row md:justify-center sm:gap-12 lg:gap-32 lg:min-h-[100svh] px-8 md:px-10 pt-28 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 dark:from-[#121212]  dark:to-[#0a0a0a] text-white overflow-hidden">
 
         <!-- Text Side -->
         <div class="max-w-xl text-center sm:text-left z-10 mt-4 md lg:mt-0">
-            <h1 class="text-4xl md:text-5xl mb-4 text-center md:text-left whitespace-nowrap">Hi, I’m  <span class="font-medium font-">Churchill</span> 👋</h1>
+          <div id="greet" class="relative overflow-hidden">
+            <!-- <p id="" class="opacity-0 text-4xl md:text-5xl mb-4 text-center md:text-left whitespace-nowrap">Hi, I’m  <span class="font-medium font-">Churchill</span> 👋</p> -->
+            <h1 id="greet" class="top-0 left-0 text-4xl md:text-5xl mb-4 text-center lg:text-left whitespace-nowrap">Hi, I’m  <span class="font-medium font-">Churchill</span> 👋</h1>
+
+          </div>
             <p id="typing" class="text-lg md:text-xl text-blue-400 font-semibold h-8 mb-6 text-center md:text-left"></p>
-            <p class="text-gray-300 mb-6 text-center md:text-left max-w-[300px] md:max-w-[400px] mx-auto md:mx-0">
-                I build fast, interactive, and modern web apps using React, Tailwind, and JavaScript.
-            </p>
-            <div class="flex items-center justify-center md:justify-start gap-2 space-x-4">
-                <a href="#projects" class="hidden sm:block px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">View My Work</a>
-                <a href="#projects" class="sm:hidden px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">My Work</a>
-                <a href="https://docs.google.com/document/d/1IkcVaqwiqt2Kh35VrxeYB6CxYXgvF6ZtTiksG17iSAs/edit?usp=sharing" target="_blank" class="px-6 py-3 border border-gray-400 rounded-xl hover:bg-gray-700 transition">
-                  Resume
-                </a>
-             
+            <div class="overflow-hidden">
+              <p id="hero-description" class="text-gray-300 mb-6 text-center md:text-left max-w-[300px] md:max-w-[400px] mx-auto md:mx-0">
+                  I build fast, interactive, and modern web apps using React, Tailwind, and JavaScript.
+              </p>
             </div>
+              <div class="flex items-center justify-center lg:justify-start gap-2 space-x-4 overflow-hidden">
+                <div id="view-work" class="relative">
+                    <a href="#projects" class="hidden sm:block px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">View My Work</a>
+                    <a href="#projects" class="sm:hidden px-6 py-3 bg-blue-500 rounded-xl shadow-lg hover:bg-blue-600 transition whitespace-nowrap">My Work</a>
+                </div>
+                <a id="resume" href="https://docs.google.com/document/d/1IkcVaqwiqt2Kh35VrxeYB6CxYXgvF6ZtTiksG17iSAs/edit?usp=sharing" target="_blank" class="relative px-6 py-3 border border-gray-400 rounded-xl hover:bg-gray-700 transition">
+                  Resume
+                </a> 
+              </div>
+           
         </div>
 
         <!-- Image Side -->
@@ -143,11 +152,21 @@
 
             <!-- Profile Image -->
             <div class="w-48 h-48 md:w-72 md:h-72 lg:w-[25rem] lg:h-[25rem]  rounded-full border-4 border-blue-500 dark:border-slate-500 shadow-xl overflow-hidden relative z-10">
-                <img src="./hero.webp" alt="Churchill's photo" class="w-full h-full object-cover object-top">
+                 <picture class="w-full h-full object-cover object-center">
+                    <!-- Mobile image -->
+                    <source srcset="./assets/images/mobile-hero.webp" media="(max-width: 768px)" type="image/webp" />
+                    <!-- Desktop image -->
+                    <img 
+                      src="./assets/images/hero.webp" 
+                      srrc=""
+                      alt="Hero" 
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </picture>
+
             </div>
         </div>
 
-        <!-- Scroll Down Indicator -->
         <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
             <div class="animate-bounce text-gray-400 cursor-pointer" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
             ↓
@@ -159,7 +178,7 @@
                 <!-- Image -->
                 <div class="relative flex flex-col items-center gap-2">
                     <div class="w-4/5 lg:w-full md:h-auto rounded-2xl overflow-hidden shadow-xl mx-auto">
-                        <img src="./about.png" alt="Churchill working" class="w-full md:h-full object-cover">
+                        <img src="./assets/images/about.webp" alt="Churchill working" class="w-full md:h-full object-cover">
                     </div>
                     <div class=" -bottom-6 -left-6 max-w-fit bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow">
                         🚀 3+ Years in Web Dev
@@ -168,7 +187,7 @@
 
                 <!-- Text -->
                 <div class="space-y-6 lg:pl-4 text-gray-600 dark:text-gray-300">
-                <h2 class="text-center md:text-left text-3xl md:text-3xl font-bold font-quick-sand">About Me</h2>
+                <h2 class="text-center lg:text-left text-3xl md:text-3xl font-bold font-quick-sand">About Me</h2>
                 <p class="text-lg md:text-lg leading-relaxed sm:px-6 lg:px-0">
                     Hey 👋 I’m <span class="font-semibold text-blue-600">Churchill</span>, a 
                     <span class="font-semibold">Frontend Developer</span> who loves bringing ideas 
@@ -209,12 +228,12 @@
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl font-bold font-quick-sand text-gray-900 dark:text-white mb-10 text-center">Projects</h2>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2 max-w-[1000px] mx-auto justify-items-center">
 
       <!-- Live Project -->
       <div class="flex flex-col justify-between bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition  dark:bg-[#0a0a0a] dark:border dark:border-slate-700 sm:max-w-[400px] lg:max-w-max">
-        <img src="./screenshots/abeniskitchen.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
-        <div class="grow flex flex-col items-start p-6 min-h-[304px] border-t">
+        <img src="./assets/images/screenshots/abeniskitchen.webp" alt="Project screenshot" class="w-full h-48 lg:h-52 object-cover object-top">
+        <div class="grow flex flex-col items-start p-6 min-h-[304px] lg:min-h-[350px] border-t">
           <span class="inline-block px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full my-6">Live Project</span>
           <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Abeni’s Kitchen</h3>
           <p class="text-gray-600 dark:text-gray-400 my-4">
@@ -227,8 +246,8 @@
 
       <!-- Template: Spa Treatment -->
       <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition  dark:bg-[#0a0a0a] dark:border dark:border-slate-700">
-        <img src="./screenshots/spa.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
-        <div class="grow flex flex-col items-start p-6 min-h-[304px]">
+        <img src="./assets/images/screenshots/spa.webp" alt="Project screenshot" class="w-full h-48 lg:h-52 object-cover object-top">
+        <div class="grow flex flex-col items-start p-6 min-h-[304px] lg:min-h-[350px]">
           <span class="inline-block px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-full my-6">Template</span>
           <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Spa Treatment</h3>
           <p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -242,8 +261,8 @@
 
       <!-- Template: Kash Juice -->
       <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition  dark:bg-[#0a0a0a] dark:border dark:border-slate-700">
-        <img src="./screenshots/kash-juice.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
-        <div class="grow flex flex-col items-start p-6 min-h-[304px] ">
+        <img src="./assets/images/screenshots/kash-juice.webp" alt="Project screenshot" class="w-full h-48 lg:h-52 object-cover object-top">
+        <div class="grow flex flex-col items-start p-6 min-h-[304px] lg:min-h-[350px] ">
           <span class="inline-block px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-full my-6">Template</span>
           <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Kash Juice</h3>
           <p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -257,8 +276,8 @@
 
       <!-- In-progress: Beejaytech -->
       <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
-        <img src="./screenshots/beejaytech.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
-        <div class="grow flex flex-col items-start p-6 min-h-[304px]">
+        <img src="./assets/images/screenshots/beejaytech.webp" alt="Project screenshot" class="w-full h-48 lg:h-52 object-cover object-top">
+        <div class="grow flex flex-col items-start p-6 min-h-[304px] lg:min-h-[350px]">
           <span class="inline-block px-3 py-1 text-sm bg-yellow-100 text-yellow-700 rounded-full my-6">In Progress</span>
           <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Beejaytech</h3>
           <p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -268,49 +287,6 @@
            <a href="https://beejaytech.vercel.app" target="_blank" class="inline-block min-w-[100px] text-white text-sm hover:underline font-medium rounded-full border bg-gradient-to-br from-slate-800 to-slate-800 py-3 px-8">View Project →</a>
         </div>
       </div>
-
-      <!-- Early Projects: TicTacToe -->
-      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
-        <img src="./screenshots/tictactoe.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
-        <div class="grow flex flex-col items-start p-6 min-h-[304px]">
-          <span class="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full my-6">Early Project</span>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Tic Tac Toe</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">
-            A simple interactive Tic Tac Toe game built to practice core web development fundamentals.
-          </p>
-          <div class="grow"></div>
-           <a href="https://tictactoe-gray-mu.vercel.app/" target="_blank" class="inline-block min-w-[100px] text-white text-sm hover:underline font-medium rounded-full border bg-gradient-to-br from-slate-800 to-slate-800 py-3 px-8">View Project →</a>
-        </div>
-      </div>
-
-      <!-- Early Projects: MovieBox -->
-      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
-        <img src="./screenshots/moviebox.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
-        <div class="grow flex flex-col items-start p-6 min-h-[304px]">
-          <span class="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full my-6">Early Project</span>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">MovieBox</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">
-            A movie search app that fetches film data from an external API and displays trending and popular titles.
-          </p>
-          <div class="grow"></div>
-           <a href="https://moviebox-hng-chapter-codes.vercel.app/" target="_blank" class="inline-block min-w-[100px] text-white text-sm hover:underline font-medium rounded-full border bg-gradient-to-br from-slate-800 to-slate-800 py-3 px-8">View Project →</a>
-        </div>
-      </div>
-
-      <!-- Early Projects: Frontend Mentor -->
-      <div class="flex flex-col justify-between sm:max-w-[400px] lg:max-w-max bg-white dark:dark:bg-[#0a0a0a] shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition dark:border dark:border-slate-700">
-        <img src="./screenshots/frontendmentor.jpg" alt="Project screenshot" class="w-full h-48 object-cover object-top">
-        <div class="grow flex flex-col items-start p-6 min-h-[304px]">
-          <span class="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full my-6">Early Project</span>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 mb-2">Frontend Mentor Challenge</h3>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">
-            A collection of solutions to Frontend Mentor challenges, focused on practicing responsive design and component layouts.
-          </p>
-          <div class="grow"></div>
-           <a href="https://chapter-codes.github.io/frontendmentor-summary-ui/" target="_blank" class="inline-block min-w-[100px] text-white text-sm hover:underline font-medium rounded-full border bg-gradient-to-br from-slate-800 to-slate-800 py-3 px-8">View Project →</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -384,10 +360,8 @@
     </footer>
 
     <!-- scripts -->
-    <script src="./app.js" ></script>
-    <script src="motion.js"></script>
-    <script src="./app.js" ></script>
-    <script src="motion.js"></script>
+    <script src="./assets/js/app.js" ></script>
+   
 
 </body>
 </html>
